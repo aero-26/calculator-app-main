@@ -2,6 +2,16 @@
 
 * {
   box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 :root {
@@ -28,7 +38,6 @@
 body {
   background-color: var(--main-color);
   color: var(--white);
-  font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -43,6 +52,25 @@ nav {
 .theme {
   display: flex;
   align-items: center;
+}
+
+.theme-label {
+  display: flex;
+  position: relative;
+  align-items: center;
+  bottom: 1.3rem;
+  left: 4rem;
+}
+
+.theme-label h5 {
+  padding: 0 0.5rem;
+  text-align: left;
+}
+.theme-label h5:first-child {
+  padding-left: 0;
+}
+.theme-label h5:last-child {
+  padding-right: 0;
 }
 
 .calculator {
@@ -79,7 +107,7 @@ label::after {
   margin: 5px 5px;
   cursor: pointer;
   position: relative;
-  right: 21px;
+  right: 22px;
   opacity: 1;
 }
 
@@ -88,25 +116,30 @@ input[type="radio"]:nth-child(1):checked + label::after {
 }
 
 input[type="radio"]:nth-child(3):checked + label::after {
-  background-color: red;
+  /* background-color: var(--toggle-btn-color); */
+  background-color: hsl(25, 98%, 40%);
 }
 
 input[type="radio"]#t-3:checked + label::after {
-  background-color: green;
+  /* background-color: var(--toggle-btn-color); */
+  background-color: hsl(176, 100%, 44%);
 }
 
 .theme h6 {
   position: relative;
-  left: calc(2rem - 15px);
-}
-
-.theme h5 {
-  position: relative;
-  bottom: 1.3rem;
-  left: 3.4rem;
-  margin: 0;
+  left: calc(2rem - 6px);
 }
 
 #display {
   background-color: var(--background-color);
+  border: none;
+  width: 100%;
+  height: 5rem;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  color: var(--white);
+  font-size: xx-large;
+  font-weight: 700;
+  text-align: right;
+  padding: 0 1rem;
 }

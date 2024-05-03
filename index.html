@@ -25,7 +25,11 @@
         <h1>calc</h1>
         <div class="theme">
           <h6>THEME</h6>
-          <h5>1&nbsp; &nbsp; 2&nbsp; &nbsp; 3</h5>
+          <div class="theme-label">
+            <h5>1</h5>
+            <h5>2</h5>
+            <h5>3</h5>
+          </div>
           <div class="selector">
             <input type="radio" name="theme" id="t-1" />
             <label for="t-1"></label>
@@ -39,8 +43,12 @@
 
       <!-- Display -->
       <display>
-        <input type="number" name="Display" id="display" />
+        <input type="number" name="Display" id="display" value="0" />
       </display>
+
+      <!-- Numbers -->
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

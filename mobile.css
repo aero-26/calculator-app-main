@@ -3,3 +3,9 @@
     padding: 1rem;
   }
 }
+
+@media screen and (max-width: 380px) {
+  .calculator {
+    padding: 0.5rem;
+  }
+}
