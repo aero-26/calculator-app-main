@@ -192,6 +192,8 @@ const cal = (operatorInput) => {
 const equal = () => {
   if (num1 === 0 && operator === "-") {
     screen.textContent = Number(screen.textContent.replaceAll(",", "")) * -1;
+  } else if (num1 === 0 && (operator === "*" || operator === "÷")) {
+    screen.textContent = Number(screen.textContent.replaceAll(",", "")) * 0;
   } else {
     cal(operator);
     operator = undefined;
